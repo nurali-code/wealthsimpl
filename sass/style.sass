@@ -1,0 +1,88 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+@import 'footer'
+@import 'modal'
+
+.main
+    position: relative
+    z-index: 1
+    display: flex
+    min-height: min(100svh,102.4rem)
+
+    align-items: center
+    text-align: center
+    p
+        max-width: 700px
+        margin: 0 auto 40px
+    &-bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        // pointer-events: none
+
+        z-index: -1
+        background-color: #fff
+        box-shadow: 0 20px 40px -20px #eee
+        overflow: hidden
+        img
+            object-fit: contain
+            width: 100%
+            height: 100%
+            bottom: 0
+            height: 100%
+            left: 0
+            margin: 0
+            max-width: none
+            padding: 0
+            position: absolute
+            right: 0
+            top: 0
+            width: 100%
+
+    .bg1,
+    .bg2,
+    .bg3,
+    .bg4,
+    .bg5
+        position: absolute
+    .bg1
+        width: clamp(21.6rem, 34.65vw + 8.61rem, 58.5rem)
+        height: clamp(16.6rem, 45.44vh + -10.66rem, 39.5rem)
+        top: 0
+        left: 60%
+        img
+            object-position: 50% 0px
+
+    .bg2
+        width: clamp(21.6rem, 34.65vw + 8.61rem, 58.5rem)
+        height: clamp(31.9rem, 86.9vh + -20.24rem, 75.7rem)
+        top: 40%
+        right: 0
+        img
+            object-position: 100% 0px
+    .bg3
+        width: clamp(21.6rem, 34.65vw + 8.61rem, 58.5rem)
+        height: clamp(11.5rem, 31.55vh + -7.43rem, 27.4rem)
+        left: 19%
+        bottom: 0
+        img
+            object-position: 50% 100%
+
+    .bg4
+        width: clamp(21.6rem, 34.65vw + 8.61rem, 58.5rem)
+        height: clamp(22.9rem, 62.3vh + -14.48rem, 54.3rem)
+        bottom: 2%
+        left: 0
+        img
+            object-position: 50% 100%
+
+    .bg5
+        width: clamp(21.6rem, 34.65vw + 8.61rem, 58.5rem)
+        height: clamp(26.9rem, 73.41vh + -17.15rem, 63.9rem)
+        top: -1%
+        left: 0
+        img
+            object-position: 0px 50%

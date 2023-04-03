@@ -15,6 +15,7 @@ $prime: #32302f
 
 html
     font-size: 62.5%
+    font-family: "Futura PT Book","system-ui",Helvetica Neue,sans-serif
 
 body
     min-height: 100vh
@@ -22,36 +23,39 @@ body
     display: flex
     flex-direction: column
     background-color: #fff
-    font-family: 'Montserrat', sans-serif
+    font-family: "Futura PT Book","system-ui",Helvetica Neue,sans-serif
     scroll-behavior: smooth
 
     &.active
         overflow: hidden
 
 h1,h2,h3,h4,h5,h6
-    font-family: 'futura pt', sans-serif
-    line-height: 130%
-    margin: 0 0 20px
 
 h1
     font-size: clamp(7.2rem, 2.26vw + 6.5rem, 9.6rem)
     line-height: 130%
+    margin-bottom: 20px
+
 h2
-    font-weight: 800
-    font-size: 48px
-    line-height: 130%
-    margin-bottom: 33px
+    font-size: clamp(4.8rem, 2.26vw + 4.1rem, 7.2rem)
+    font-weight: 600
+    letter-spacing: -0.0075em
+    line-height: 108%
+    margin-bottom: 2.4rem
+
 h3
-    font-weight: 800
-    font-size: 34px
-    line-height: 130%
-    margin-bottom: 32px
+    font-size: 4.8rem
+    letter-spacing: -.0075em
+    font-weight: 600
+    line-height: 108%
+    margin-bottom: 1.6rem
 
 h4
+    font-size: 1.8rem
     font-weight: 600
-    font-size: 24px
-    line-height: 140%
-    margin-bottom: 8px
+    letter-spacing: -.0075em
+    line-height: 108%
+    margin-bottom: 2rem
 
 p
     font-size: clamp(2.4rem, 0.56vw + 2.22rem, 3rem)
@@ -62,19 +66,20 @@ p
 
 .container
     width: 100%
-    max-width: 1440px
-    padding: 0 
+    max-width: 1216px
+    padding: 0
     margin: 0 auto
-    position: relative
-    z-index: 1
 
 img
     max-width: 100%
 
 a,
 button
+    font-family: "Futura PT","system-ui",Helvetica Neue,sans-serif
+
     font-size: 1.8rem
-    font-weight: 600
+    font-weight: 500
+
     line-height: 108%
     letter-spacing: -.0075em
     text-decoration: none
@@ -88,7 +93,8 @@ button
         opacity: .8
 
 section
-    padding: 80px 0
+    padding-bottom: 19.2rem
+    padding-top: 19.2rem
     position: relative
 
 .btn
@@ -177,18 +183,20 @@ section
         background-image: url('../img/loader.gif')
 
     &-2
-        background-color: #BAD7E9
-        color: $black
+        background-color: #fff
+        color: $prime
         box-shadow: none !important
         padding: 20px 44px 19px
-        border: 2px solid transparent
+        border: 1px solid $prime
         &[disabled]
             background-color: #fff
             opacity: .4
 
         &:hover
-            background-color: transparent
-            border-color: #000
+
+    &.sm
+        min-height: 4.6rem
+        padding: 1.2rem 2.4rem
 
 .wrapper, .wrap, .wrap-strech, .wrap-start
     display: flex
@@ -263,12 +271,33 @@ textarea
     &-content
         display: none
 
-@media screen and ( max-width: 1500px )
-    .container
-        max-width: 1200px
+    &-btn
+        position: relative
+        z-index: 1
+        padding-right: 24px !important
+        &::after
+            content: ''
+            pointer-events: none
+            display: inline-block
+            width: 16px
+            height: 16px
+            background-image: url('../img/arrow-down.svg')
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 100% auto
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            transition: all ease-out .3s
 
-    h1
-        font-size: 48px
+        &.active::after
+            transform: translateY(-50%) rotate(180deg)
+
+    &:hover
+        .dropdown
+            &-btn::after
+                transform: translateY(-50%) rotate(180deg)
 
 @media screen and ( max-width: 1200px )
     p

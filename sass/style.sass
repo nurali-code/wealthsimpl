@@ -13,7 +13,7 @@
     align-items: center
     text-align: center
     p
-        max-width: 700px
+        max-width: 610px
         margin: 0 auto 40px
     &-bg
         position: absolute
@@ -86,3 +86,132 @@
         left: 0
         img
             object-position: 0px 50%
+
+.pop
+    padding: 0
+    position: relative
+    z-index: 100
+    top: -6.4rem
+    .container
+        background-color: $prime
+        color: #fff
+        max-width: 1216px
+        margin: 0 auto
+        border-radius: 5.6rem
+        padding-bottom: 9.6rem
+        padding-top: 9.6rem
+    .content
+        max-width: 58%
+        padding: 0 6.4rem
+
+    h2
+        margin-bottom: 1.6rem
+
+    video
+        padding: 0 6.4rem 0 0
+        width: 40%
+
+.info
+    position: relative
+    z-index: 1
+    overflow: hidden
+    video
+        pointer-events: none
+        width: 1100px
+        height: 1100px
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-104%, -50%)
+        z-index: -1
+    .container
+        max-width: 1216px
+        video
+            position: static
+            width: 40%
+            height: unset
+            transform: none !important
+
+    &-content
+        max-width: 592px
+        margin: 0 0 0 auto
+    picture
+        display: block
+        width: 40%
+
+    &.reverce
+        .info
+            &-content
+                margin: 0
+
+        video
+            transform: translate(0%, -55%)
+
+    &.gradient
+        background: linear-gradient(180deg,#fff,#f5fae7)
+        &-blue
+            background: linear-gradient(180deg,#fff,#f4f9fc)
+
+.doble
+    h2
+        text-align: center
+        max-width: 600px
+        margin: 0 auto 8rem
+
+    .wrap
+        align-items: stretch
+
+    .item
+        width: 48%
+        background-color: #f1f0f0
+        border-radius: 5.6rem
+        overflow: hidden
+        position: relative
+        z-index: 1
+        padding: 6.4rem 6.4rem 400px
+
+        img
+            width: 100%
+            // height: 100%
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: -1
+            object-fit: contain
+
+        video
+            pointer-events: none
+            width: 800px
+            height: 800px
+            position: absolute
+            z-index: -1
+            left: 50%
+            bottom: -70%
+            transform: translate(-50%, -50%)
+
+        &:nth-of-type(2)
+            background: radial-gradient(circle at 42% 32%, rgb(246, 238, 247) 20%, rgb(212, 229, 244) 80%)
+
+.start
+    text-align: center
+    overflow: hidden
+    min-height: 100vh
+    background-color: #fbeee6
+    position: relative
+    z-index: 1
+
+    h2
+        text-align: center
+        max-width: 600px
+        margin: 0 auto 2rem
+
+    .btn 
+        margin-bottom: 30vh
+
+    video
+        width: 100vw
+        position: absolute
+        top: 50%
+        transform: translateY(-22%)
+        left: 0
+        z-index: -1

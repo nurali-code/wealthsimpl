@@ -703,6 +703,11 @@ header .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;
 }
+@media screen and (max-width: 1124px) {
+  header .nav {
+    display: none;
+  }
+}
 
 .footer .wrap {
   padding-bottom: 4rem;
@@ -1334,4 +1339,26 @@ header .dropdown:hover .dropdown-content {
           transform: translateY(-22%);
   left: 0;
   z-index: -1;
+}
+
+@media screen and (max-width: 1124px) {
+  .main .bg1 {
+    left: 40%;
+  }
+  .main .bg2 {
+    right: -22%;
+    top: 58%;
+  }
+  .main .bg3 {
+    bottom: 0;
+    left: 17%;
+  }
+  .main .bg4 {
+    bottom: 0;
+    left: -20%;
+  }
+  .main .bg5 {
+    left: -12%;
+    top: -10%;
+  }
 }/*# sourceMappingURL=style.css.map */

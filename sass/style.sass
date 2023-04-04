@@ -196,10 +196,11 @@
             background: radial-gradient(circle at 42% 32%, rgb(246, 238, 247) 20%, rgb(212, 229, 244) 80%)
 
 .start
+    clip-path: inset(0px 26.5348px round 4.6436rem)
+    background-color: #fbeee6
     text-align: center
     overflow: hidden
     min-height: 100vh
-    background-color: #fbeee6
     position: relative
     z-index: 1
 
@@ -237,3 +238,91 @@
         .bg5
             left: -12%
             top: -10%
+
+    .pop
+        padding: 0 3.2rem
+        .container
+            display: block
+            text-align: center
+            padding: 8rem 0 0
+
+        .content
+            padding: 0 3.2rem
+            max-width: 100%
+
+        video
+            display: block
+            width: calc( 100vw - 6.4rem )
+            height: calc( 100vw - 6.4rem )
+            padding: 0
+            margin: 0 auto
+
+    .info
+        text-align: center
+        padding-bottom: 50vw
+        .container
+            display: block
+            video
+                margin-top: 3.2rem
+                width: 80vw
+                height: 80vw
+
+        &-content
+            margin: 0
+            max-width: 100%
+
+        picture
+            width: 100%
+            max-width: 400px
+            margin: 0 auto 2rem
+
+        video
+            width: 100vw
+            height: 100vw
+            transform: none
+            left: 0
+            top: auto
+            bottom: 0
+            transform: translateY(20%)
+
+        &.reverce
+            padding-bottom: 80vw
+            video
+                transform: translateY(10%)
+
+        &.imaged
+            padding-bottom: 16rem
+        &.gradient-blue
+            padding-bottom: 16rem
+
+    .doble
+        .container
+
+        .item
+            padding: 3.2rem 3.2rem 338px
+            border-radius: 3.2rem
+            video
+                width: 600px
+                height: 600px
+                bottom: -55%
+
+            img
+                height: 43vw
+
+@media screen and ( max-width: 620px )
+    .doble
+        .container
+            display: block
+        .item
+            width: 100%
+            padding-bottom: 300px
+            &:last-of-type
+                margin-top: 4rem
+
+            img 
+                height: 100vw
+
+            video
+                height: 500px
+                width: 500px
+                bottom: -47%

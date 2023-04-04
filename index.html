@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="yandex-verification" content="d7decdc3f1939dc4" />
     <title>Wealthsimple: Investing, Regulated Crypto, Stocks & ETFs</title>
     <meta property="description" name="description"
         content="Smart investing tools and personalized advice designed to build long-term wealth. Managed investing, commission-free stock trading, ETFs, everyday spending, and crypto — all in one app.">
@@ -23,6 +22,9 @@
     <header>
         <div class="container wrap">
             <a href="#" class="logo"><img src="./img/logo.svg" alt="logo"></a>
+            <button class="btn-menu">
+                <span></span>
+            </button>
             <ul class="nav wrap">
                 <li class="dropdown">
                     <button class="dropdown-btn nav__link">Invest</button>
@@ -42,8 +44,12 @@
                         <li><a href="#" class="nav__link">Income tax calculator</a></li>
                     </ul>
                 </li>
+                <li class="hidden">
+                    <a href="#" class="btn btn-2 sm">Log in</a>
+                    <a href="#" class="btn sm">Get started</a>
+                </li>
             </ul>
-            <div class="wrap">
+            <div class="wrap actions">
                 <a href="#">Log in</a>
                 <a href="#" class="btn sm">Get started</a>
             </div>
@@ -63,35 +69,35 @@
                 <picture>
                     <source type="image/avif" srcset="./img/main-01.avif">
                     <source type="image/webp" srcset="./img/main-01.webp">
-                    <img src="./img/main-01.webp" alt="img" laoding="eager">
+                    <img src="./img/main-01.webp" alt="img">
                 </picture>
             </div>
             <div class="bg2">
                 <picture>
                     <source type="image/avif" srcset="./img/main-02.avif">
                     <source type="image/webp" srcset="./img/main-02.webp">
-                    <img src="./img/main-02.webp" alt="img" laoding="eager">
+                    <img src="./img/main-02.webp" alt="img">
                 </picture>
             </div>
             <div class="bg3">
                 <picture>
                     <source type="image/avif" srcset="./img/main-03.avif">
                     <source type="image/webp" srcset="./img/main-03.webp">
-                    <img src="./img/main-03.webp" alt="img" laoding="eager">
+                    <img src="./img/main-03.webp" alt="img">
                 </picture>
             </div>
             <div class="bg4">
                 <picture>
                     <source type="image/avif" srcset="./img/main-04.avif">
                     <source type="image/webp" srcset="./img/main-04.webp">
-                    <img src="./img/main-04.webp" alt="img" laoding="eager">
+                    <img src="./img/main-04.webp" alt="img">
                 </picture>
             </div>
             <div class="bg5">
                 <picture>
                     <source type="image/avif" srcset="./img/main-05.avif">
                     <source type="image/webp" srcset="./img/main-05.webp">
-                    <img src="./img/main-05.webp" alt="img" laoding="eager">
+                    <img src="./img/main-05.webp" alt="img">
                 </picture>
             </div>
         </div>
@@ -108,7 +114,7 @@
                 </p>
                 <a href="#" class="btn btn-2">Invest in private credit</a>
             </div>
-            <video autoplay="" muted loop preload="auto" poster="./video/poster-1.webp">
+            <video muted loop preload="auto" poster="./video/poster-1.webp">
                 <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/01.mp4">
                 <source type="video/webm" src="./video/01.webm">
             </video>
@@ -117,10 +123,6 @@
     </section>
 
     <section class="info">
-        <video autoplay="" muted loop preload="auto">
-            <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/02.mp4">
-            <source type="video/webm" src="./video/02.webm">
-        </video>
         <div class="container">
             <div class="info-content">
                 <h2>Get a portfolio built by our experts</h2>
@@ -131,6 +133,10 @@
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
         </div>
+        <video muted loop preload="auto">
+            <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/02.mp4">
+            <source type="video/webm" src="./video/02.webm">
+        </video>
     </section>
 
     <section class="info reverce gradient">
@@ -144,18 +150,18 @@
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
         </div>
-        <video autoplay muted loop preload="auto">
+        <video muted loop preload="auto">
             <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/03.mp4">
             <source type="video/webm" src="./video/03.webm">
         </video>
     </section>
 
-    <section class="info">
+    <section class="info imaged">
         <div class="container wrap">
             <picture>
                 <source type="image/avif" srcset="./img/FeatureAdvisors.avif">
                 <source type="image/webp" srcset="./img/FeatureAdvisors.webp">
-                <img loading="lazy" alt="Feature Advisors">
+                <img loading="lazy" src="./img/FeatureAdvisors.webp" alt="Feature Advisors">
             </picture>
             <div class="info-content">
                 <h2>Advice on demand</h2>
@@ -178,7 +184,7 @@
                 </p>
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
-            <video autoplay="" muted loop preload="auto">
+            <video muted loop preload="auto">
                 <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/security.mp4">
                 <source type="video/webm" src="./video/security.webm">
             </video>
@@ -209,7 +215,7 @@
                         trading platform.
                     </p>
                     <a href="#" class="btn btn-2">Crypto</a>
-                    <video autoplay muted loop preload="auto">
+                    <video muted loop preload="auto">
                         <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/04.mp4">
                         <source type="video/webm" src="./video/04.webm">
                     </video>
@@ -224,7 +230,7 @@
             <p>Open an account, make a deposit, and put your money to work.</p>
             <a href="#" class="btn">Get started</a>
         </div>
-        <video autoplay="" muted loop preload="auto">
+        <video muted loop preload="auto">
             <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/05.mp4">
             <source type="video/webm" src="./video/05.webm">
         </video>
@@ -233,7 +239,7 @@
     <footer class="footer">
         <div class="container">
             <div class="wrap">
-                <nav class="col">
+                <nav>
                     <h4 class="heading">About us</h4>
                     <a href="#">Our company</a>
                     <a href="#">Careers</a>

@@ -112,42 +112,38 @@ section
         width: 40px
         object-fit: cover
         vertical-align: middle
+
     &-menu
-        position: fixed
-        top: 16px
-        right: 26px
-        z-index: 99999999
         display: inline-block
         width: 50px
-        height: 45px
+        height: 50px
+        position: relative
         margin: 0
-        background-color: $prime
-        box-shadow: 0px 5px 27px -10px $prime
+        background-color: transparent
         span
             position: absolute
             top: 50%
             left: 20%
             margin-top: -2px
             display: block
-            width: 60%
+            width: 55%
             height: 2px
             transition: all ease .3s
             border-radius: 2px
-            background-color: #fff
             &::before,
             &::after
                 content: ''
                 display: block
                 width: 100%
                 height: 2px
-                background-color: #fff
+                background-color: $prime
                 position: absolute
-                top: 10px
+                top: 5px
                 left: 0
                 transition: all ease .3s
                 border-radius: 2px
             &::after
-                top: -10px
+                top: -5px
 
         &.active
             span
@@ -301,5 +297,10 @@ textarea
 
 @media screen and ( max-width: 1240px )
     .container
-        padding: 0 32px
-    
+        padding: 0 3.2rem
+
+    section
+        padding: 16rem 0
+
+    h3
+        font-size: 3.6rem!important

@@ -196,11 +196,11 @@
             background: radial-gradient(circle at 42% 32%, rgb(246, 238, 247) 20%, rgb(212, 229, 244) 80%)
 
 .start
-    clip-path: inset(0px 26.5348px round 4.6436rem)
+    // clip-path: inset(0px 26.5348px round 4.6436rem)
     background-color: #fbeee6
     text-align: center
     overflow: hidden
-    min-height: 100vh
+    min-height: 1080px
     position: relative
     z-index: 1
 
@@ -208,9 +208,6 @@
         text-align: center
         max-width: 600px
         margin: 0 auto 2rem
-
-    .btn
-        margin-bottom: 30vh
 
     video
         width: 100vw
@@ -283,7 +280,7 @@
             left: 0
             top: auto
             bottom: 0
-            transform: translateY(20%)
+            transform: translateY(22%)
 
         &.reverce
             padding-bottom: 80vw
@@ -309,6 +306,13 @@
             img
                 height: 43vw
 
+    .start
+        padding-bottom: 4rem
+        min-height: 800px
+
+        video
+            transform: translateY(-12%)
+
 @media screen and ( max-width: 620px )
     .doble
         .container
@@ -319,10 +323,17 @@
             &:last-of-type
                 margin-top: 4rem
 
-            img 
+            img
                 height: 100vw
 
             video
                 height: 500px
                 width: 500px
                 bottom: -47%
+
+    .start
+        // min-height: 600px
+
+        video
+            top: 60%
+            transform: translateY(0%)

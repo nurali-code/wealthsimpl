@@ -22,10 +22,8 @@
     <header>
         <div class="container wrap">
             <a href="#" class="logo"><img src="./img/logo.svg" alt="logo"></a>
-            <button class="btn-menu">
-                <span></span>
-            </button>
-            <ul class="nav wrap">
+            <button id="menu" class="btn-menu"><span></span></button>
+            <ul id="nav" class="nav wrap">
                 <li class="dropdown">
                     <button class="dropdown-btn nav__link">Invest</button>
                     <ul class="dropdown-content wrap">
@@ -286,6 +284,16 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        const BTN = document.getElementById('menu'),
+            NAV = document.getElementById('nav');
+        BTN.onclick = () => {
+            BTN.classList.toggle('active');
+            NAV.classList.toggle('active');
+        };
+        
+    </script>
 
 </body>
 

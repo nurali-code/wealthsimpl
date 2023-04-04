@@ -13,7 +13,7 @@ header
 
     .container
         max-width: 1500px
-        padding: 0 32px
+        padding: 0 3.2rem
 
     .nav
         list-style: none
@@ -82,20 +82,24 @@ header
                 a
                     padding: 30px 0
 
-        &:hover
-            .dropdown
-                &-btn
+        @media screen and ( max-width: 1124px )
+            &:hover
+                .dropdown
+                    &-btn
 
-                &-content
-                    visibility: visible
-                    opacity: 1
+                    &-content
+                        visibility: visible
+                        opacity: 1
 
     @media screen and ( max-width: 1124px )
         padding: 3px 0
+        .container
+            padding: 0 2rem 0 3.2rem
+
         .btn
             &-menu
                 display: inline-block
-        
+
         .nav
             position: fixed
             top: 56px
@@ -104,26 +108,33 @@ header
             height: calc( 100vh - 56px )
             z-index: 1
             background-color: #fff
+            overflow-y: scroll
             display: block
             visibility: hidden
             opacity: 0
             transition: all ease .4s
-            padding: 4.8rem 0 0
+            padding: 4.8rem 3.2rem 120px
             &__link
                 padding: 1.6rem 0
                 display: block
                 width: 100%
                 text-align: left
-                border-bottom: 1px solid rgba(0, 0, 0, .1)
+            &__link,
+            .dropdown-btn
+                font-size: 2.4rem
+
             li
-                padding: 0 3.2rem
+                padding: 0
                 margin: 0
+                border-bottom: 1px solid rgba(0, 0, 0, .1)
                 &.hidden
                     text-align: center
                     display: block
                     padding: 2.4rem 3.2rem
+                    background-color: #fff
+                    z-index: 111
                     box-shadow: 0 2px 10px #00000012
-                    position: absolute
+                    position: fixed
                     bottom: 0
                     left: 0
                     width: 100%
@@ -134,6 +145,26 @@ header
                 visibility: visible
                 opacity: 1
 
-
         .actions
             display: none
+
+        .dropdown
+            &-content
+                border: none
+                display: none
+                position: static
+                transform: none
+                box-shadow: none
+                padding: .8rem 0 2.4rem
+                li
+                    display: block
+                    padding: 0
+                    border: none
+                    a
+                        font-size: 1.8rem
+                        border: none
+                        padding: 1rem 0
+
+                &.active
+                    visibility: visible
+                    opacity: 1

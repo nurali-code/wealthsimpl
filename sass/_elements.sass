@@ -265,6 +265,8 @@ textarea
 .dropdown
     &-content
         display: none
+        &.active 
+            display: block
 
     &-btn
         position: relative
@@ -289,10 +291,11 @@ textarea
         &.active::after
             transform: translateY(-50%) rotate(180deg)
 
-    &:hover
-        .dropdown
-            &-btn::after
-                transform: translateY(-50%) rotate(180deg)
+    @media screen and ( 1240px )
+        &:hover
+            .dropdown
+                &-btn::after
+                    transform: translateY(-50%) rotate(180deg)
 
 @media screen and ( max-width: 1240px )
     .container
@@ -303,3 +306,4 @@ textarea
 
     h3
         font-size: 3.6rem!important
+

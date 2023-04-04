@@ -112,7 +112,7 @@
                 </p>
                 <a href="#" class="btn btn-2">Invest in private credit</a>
             </div>
-            <video muted loop preload="auto" poster="./video/poster-1.webp">
+            <video muted autoplay loop preload="auto" poster="./video/poster-1.webp">
                 <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/01.mp4">
                 <source type="video/webm" src="./video/01.webm">
             </video>
@@ -131,7 +131,7 @@
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
         </div>
-        <video muted loop preload="auto">
+        <video muted autoplay loop preload="auto">
             <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/02.mp4">
             <source type="video/webm" src="./video/02.webm">
         </video>
@@ -148,7 +148,7 @@
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
         </div>
-        <video muted loop preload="auto">
+        <video muted autoplay loop preload="auto">
             <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/03.mp4">
             <source type="video/webm" src="./video/03.webm">
         </video>
@@ -182,7 +182,7 @@
                 </p>
                 <a href="#" class="btn btn-2">Managed investing</a>
             </div>
-            <video muted loop preload="auto">
+            <video muted autoplay loop preload="auto">
                 <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/security.mp4">
                 <source type="video/webm" src="./video/security.webm">
             </video>
@@ -213,7 +213,7 @@
                         trading platform.
                     </p>
                     <a href="#" class="btn btn-2">Crypto</a>
-                    <video muted loop preload="auto">
+                    <video muted autoplay loop preload="auto">
                         <source type="video/mp4; codecs=&quot;hvc1&quot;" src="./video/04.mp4">
                         <source type="video/webm" src="./video/04.webm">
                     </video>
@@ -287,12 +287,20 @@
 
     <script>
         const BTN = document.getElementById('menu'),
-            NAV = document.getElementById('nav');
+            NAV = document.getElementById('nav'),
+            dpBtn = document.querySelectorAll('.dropdown-btn'),
+            dpContent = document.querySelectorAll('.dropdown-content');
         BTN.onclick = () => {
             BTN.classList.toggle('active');
             NAV.classList.toggle('active');
         };
-        
+
+        dpBtn.forEach((elem) => {
+            elem.onclick = function () {
+                this.classList.toggle('active');
+                this.nextElementSibling.classList.toggle('active');
+            }
+        })
     </script>
 
 </body>
